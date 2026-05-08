@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Tutu Adeklo (Dordor) | Legacy A rchive</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Global Assets -->
+    <audio id="bg-audio" loop src="https://www.soundjay.com/nature/forest-ambience-01.mp3"></audio>
+    <div id="fireflies-container" class="fixed inset-0 z-10" style="pointer-events: none;"></div>
+    <div class="mist-overlay"></div>
+    <div class="ambient-light"></div>
+
+
+
+    <!-- Navigation -->
+    <nav class="fixed z-50 bg-black/30 backdrop-blur-md border-b border-stone-800 py-4 px-8" style="top: 0; left: 0; width: 100%;">
+        <div class="max-w-7xl flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="rounded-full border border-amber-500/50 flex items-center justify-center text-amber-500 font-bold italic text-xs" style="width: 2rem; height: 2rem;">JD</div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-lg tracking-widest text-amber-500 uppercase leading-none">John Tutu Adeklo</span>
+                    <span class="font-bold mt-1" style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--color-stone-400);">The Adeklo Archive</span>
+                </div>
+            </div>
+            
+            <ul id="nav-links" class="hidden lg:flex items-center" style="list-style: none; gap: 2rem;">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#biography" class="nav-link">Biography</a></li>
+                <li><a href="#hunting" class="nav-link">Hunting</a></li>
+                <li><a href="#church" class="nav-link">Church</a></li>
+                <li><a href="#family" class="nav-link">Family</a></li>
+                <li><a href="#hlefi" class="nav-link">Hlefi</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+            </ul>
+
+            <button id="mobile-nav-toggle" class="lg:hidden text-amber-500" style="background: none; border: none; cursor: pointer;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- App Root -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center p-8 pt-24 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <video autoplay muted loop playsinline class="w-full h-full object-cover" style="opacity: 0.4;">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-man-walking-in-a-forest-with-a-foggy-atmosphere-2178-large.mp4" type="video/mp4">
+                </video>
+                <div class="absolute inset-0" style="background:庆渐gradient(to bottom, var(--color-forest-dark), transparent, var(--color-forest-dark));"></div>
+            </div>
+
+            <div class="relative z-20 max-w-7xl flex flex-col lg:flex-row items-center gap-16">
+                <!-- Left Branding -->
+                <div class="lg:w-1/2 reveal">
+                    <span class="block text-amber-600 font-bold uppercase tracking-widest text-xs mb-4" style="letter-spacing: 0.4em;">Museum Archive // Pioneer</span>
+                    <h1 class="text-6xl md:text-8xl font-serif font-light text-stone-100 leading-tight mb-4">John Tutu <br/><span class="italic">Adeklo</span></h1>
+                    <p class="text-xs uppercase tracking-widest text-stone-400 font-bold mb-8" style="letter-spacing: 0.3em;">Hunter & bull; First Presbyter of Hlefi & bull; Patriarch</p>
+                    
+                    <div class="bg-stone-900/40 backdrop-blur-md p-8 rounded-lg border border-stone-800 shadow-2xl mb-12">
+                        <p class="italic font-serif text-xl text-stone-300 leading-relaxed">
+                            “A Life of Courage, Faith, Leadership and Legacy” &mdash; John Tutu Adeklo (Dordor) was a respected hunter, family patriarch, and the first Presbyter of the Evangelical Presbyterian Church in Hlefi, Ghana.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-6">
+                        <a href="#biography" class="btn-primary">Explore History</a>
+                        <a href="#hlefi" class="btn-secondary">Hlefi Heritage</a>
+                    </div>
+                </div>
+
+                <!-- Right Visual -->
+                <div class="lg:w-1/2 flex items-center justify-center reveal" style="transition-delay: 200ms;">
+                    <div class="relative p-6 bg-stone-900/60 rounded-xl border border-white/5 shadow-2xl">
+                        <div class="portrait-frame">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800" class="img-cover" style="filter: sepia(0.2);" alt="Portrait">
+                            <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);"></div>
+                            <div class="absolute" style="bottom: 1.5rem; left: 1.5rem; right: 1.5rem;">
+                                <span class="bg-amber-50 text-forest-dark font-bold uppercase tracking-widest" style="font-size: 10px; padding: 0.25rem 0.75rem; background-color: var(--color-gold-accent);">The Patriarch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="absolute z-20 flex flex-col items-center gap-2 animate-bounce" style="bottom: 2.5rem; left: 50%; transform: translateX(-50%);">
+                <span class="font-mono text-amber-500 uppercase tracking-widest" style="font-size: 9px; opacity: 0.6; letter-spacing: 0.3em;">Scroll Down</span>
+                <div style="width: 1px; height: 2rem; background: linear-gradient(to bottom, var(--color-gold-accent), transparent);"></div>
+            </div>
+        </section>
+
+        <!-- Biography Section -->
+        <section id="biography" class="py-32 px-8 bg-forest-medium relative overflow-hidden">
+            <div class="max-w-7xl relative z-20">
+                <div class="text-center mb-20 reveal">
+                    <h2 class="font-serif text-5xl text-amber-500 mb-4 font-light italic">Biography of John Tutu Adeklo (Dordor)</h2>
+                    <p class="text-stone-300 uppercase tracking-widest font-bold" style="font-size: 11px;">Hunter, Pioneer Presbyter, and Founding Pillar of the Church in Hlefi</p>
+                    <div style="width: 6rem; height: 1px; background-color: var(--color-gold-accent); margin: 1rem auto; opacity: 0.5;"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <div class="space-y-12">
+                        <!-- Early Life -->
+                        <div class="reveal">
+                            <h3 class="text-xl text-stone-100 font-serif mb-4 border-b border-amber-500/20 pb-2">Early Life and Ancestry</h3>
+                            <p class="text-stone-400 leading-relaxed text-sm mb-4">
+                                In the oral memory of the people of Hlefi, John Tutu Adeklo—also known by the family name Dordor—is remembered as a man born into a generation when life in the Akwapim–Togo mountain settlements demanded strength, endurance, and wisdom.
+                            </p>
+                            <p class="text-stone-400 leading-relaxed text-sm">
+                                He grew up in the rural Ewe environment of what is today the Ho West area of Ghana. Like many men of his time, he lived close to nature and mastered the skills needed for survival in the forested hills around Hlefi and its surrounding communities. From an early age, he became known as a skilled and respected hunter, providing food and contributing to the wellbeing of his community.
+                            </p>
+                        </div>
+
+                        <!-- Life as Hunter -->
+                        <div class="reveal" style="transition-delay: 100ms;">
+                            <h3 class="text-xl text-stone-100 font-serif mb-4 border-b border-amber-500/20 pb-2">Life as a Hunter and Community Figure</h3>
+                            <p class="text-stone-400 leading-relaxed text-sm mb-4">
+                                Before formal Christianity fully rooted itself in Hlefi, John Tutu Adeklo was already known as a dependable figure in the village. His hunting expeditions across the Akwapim–Togo ranges provided meat and resources for families and strengthened his reputation as a courageous and disciplined man.
+                            </p>
+                            <p class="text-stone-400 leading-relaxed text-sm">
+                                In oral tradition, he is remembered not only as a hunter but as a man of deep respect for spiritual matters, living a life that later aligned naturally with the teachings of the early Christian missionaries.
+                            </p>
+                        </div>
+
+                        <!-- Marriage and Family Life -->
+                        <div class="reveal" style="transition-delay: 200ms;">
+                            <h3 class="text-xl text-stone-100 font-serif mb-4 border-b border-amber-500/20 pb-2">Marriage and Family Life</h3>
+                            <div class="flex flex-col md:flex-row gap-6 mb-4">
+                                <div class="w-full md:w-1/3 flex-shrink-0">
+                                    <div class="portrait-frame" style="aspect-ratio: 1/1; height: auto;">
+                                        <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&q=80&w=400" class="img-cover sepia-[0.3]" alt="John Tutu Adeklo and Ruth Ehah (Representative)">
+                                        <div class="absolute inset-0 bg-black/20"></div>
+                                        <div class="absolute bottom-2 left-2 right-2">
+                                            <p class="text-[8px] uppercase tracking-widest text-white font-bold bg-amber-900/80 p-1 text-center">Tutu & Ruth</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-stone-400 leading-relaxed text-sm mb-4">
+                                        John Tutu Adeklo was married to <strong>Ruth Ehah</strong>, an industrious and hardworking woman originally from Todome in the Volta Region. She is remembered in family tradition as a strong partner who contributed greatly to the stability and growth of their household.
+                                    </p>
+                                    <p class="text-stone-400 leading-relaxed text-sm">
+                                        Together, John Tutu Adeklo and Ruth Ehah were blessed with <strong>seven children</strong>, forming the foundation of the Adeklo (Dordor) family lineage. Their home became a center of discipline, hard work, and early Christian values that would influence future generations.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-12">
+                        <!-- Conversion and Rise -->
+                        <div class="reveal" style="transition-delay: 150ms;">
+                            <h3 class="text-xl text-stone-100 font-serif mb-4 border-b border-amber-500/20 pb-2">Conversion and Rise in the Early Church</h3>
+                            <p class="text-stone-400 leading-relaxed text-sm mb-4">
+                                With the arrival and spread of the Evangelical Presbyterian Church in Hlefi, John Tutu Adeklo became one of the earliest converts in the community. His integrity, leadership among hunters, and respected standing in the village made him a natural leader in the emerging Christian congregation.
+                            </p>
+                            <p class="italic text-amber-500 text-sm mb-2">The first Presbytery leader (Presbyter) of the E.P. Church in Hlefi</p>
+                            <ul class="text-stone-400 text-xs space-y-2 pl-4" style="list-style: disc; display: flex; flex-direction: column; gap: 0.5rem;">
+                                <li>Supporting missionary catechists</li>
+                                <li>Organizing early worship gatherings</li>
+                                <li>Visiting and encouraging new converts</li>
+                                <li>Maintaining discipline and unity among believers</li>
+                            </ul>
+                        </div>
+
+                        <!-- Founding Role -->
+                         <div class="reveal" style="transition-delay: 250ms;">
+                            <h3 class="text-xl text-stone-100 font-serif mb-4 border-b border-amber-500/20 pb-2">Founding Role in the Hlefi Church</h3>
+                            <p class="text-stone-400 leading-relaxed text-sm">
+                                As one of the earliest indigenous church leaders in Hlefi, John Tutu Adeklo played a foundational role in shaping the spiritual life of the community. In the early E.P. Church system, presbyters were not only spiritual leaders but also custodians of order and moral guidance. His leadership helped stabilize the church during its formative years.
+                            </p>
+                        </div>
+
+                         <!-- Character and Legacy -->
+                         <div class="reveal" style="transition-delay: 350ms;">
+                            <h3 class="text-xl text-stone-100 font-serif mb-4 border-b border-amber-500/20 pb-2">Character and Legacy</h3>
+                            <ul class="text-stone-400 text-sm space-y-2 pl-4 mb-4" style="list-style: square; display: flex; flex-direction: column; gap: 0.5rem;">
+                                <li>A disciplined and fearless hunter</li>
+                                <li>A committed early Christian leader</li>
+                                <li>A respected elder of Hlefi</li>
+                                <li>A family man who raised seven children with Ruth Ehah</li>
+                                <li>A foundational pillar of the E.P. Church in Hlefi</li>
+                            </ul>
+                            <p class="text-stone-400 leading-relaxed text-sm">
+                                His life reflects the transition of a generation that moved from traditional livelihoods into structured Christian community leadership.
+                            </p>
+                        </div>
+
+                        <!-- Final Years -->
+                        <div class="reveal" style="transition-delay: 450ms;">
+                            <h3 class="text-xl text-stone-100 font-serif mb-4 border-b border-amber-500/20 pb-2">Final Years and Remembrance</h3>
+                            <p class="text-stone-400 leading-relaxed text-sm">
+                                Although written historical records are limited, oral tradition holds that John Tutu Adeklo lived to witness the strengthening of the church he helped establish and the growth of his children within the Christian faith. He is remembered as part of the pioneering generation that shaped both the spiritual and social foundation of Hlefi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- A.I Disclosure -->
+                <div class="mt-20 p-8 border border-white/5 bg-black/40 rounded-lg reveal">
+                    <p class="text-xs uppercase font-bold text-amber-700 tracking-widest mb-4">Archive Note // Personal History</p>
+                    <p class="text-stone-500 italic leading-relaxed text-sm">
+                        Note: All images of John Tutu Adeklo and his wife are A.I. generated based on traditional descriptions. His biography is preserved through oral history; formal written archives for exact dates are limited, and information will be updated as research continues.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hunting Legacy Section -->
+        <section id="hunting" class="py-32 px-8 bg-forest-dark relative overflow-hidden">
+            <div class="max-w-7xl relative z-10">
+                <div class="text-center mb-24 reveal">
+                    <span class="text-xs uppercase tracking-widest text-amber-600 font-bold mb-2 block" style="letter-spacing: 0.3em;">Forest Heritage // 02</span>
+                    <h2 class="font-serif text-6xl text-white font-light">Hunting Legacy</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 text-left">
+                    <div class="reveal">
+                        <div class="card-archive">
+                            <h3 class="text-2xl text-stone-100 mb-6 font-serif" style="text-decoration: underline; text-underline-offset: 8px; text-decoration-color: rgba(245, 158, 11, 0.2);">Archival 3D Animation</h3>
+                            
+                            <div class="aspect-video w-full bg-black rounded-lg overflow-hidden border border-white/10 mb-8 relative">
+                                <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                                    <source src="https://assets.mixkit.co/videos/preview/mixkit-african-landscape-at-sunset-with-mist-34751-large.mp4" type="video/mp4">
+                                </video>
+                                <div class="absolute inset-0 flex items-center justify-center p-8 text-center bg-black/40">
+                                    <p class="text-amber-500 font-mono text-xs tracking-widest uppercase">Digital Reconstruction // African Hunter tracking in the Togo Ranges</p>
+                                </div>
+                            </div>
+                            
+                            <p class="text-stone-400 text-sm leading-relaxed">
+                                The skill of the hunt was more than just survival; it was a testament to discipline and environmental wisdom. Dordor's knowledge of the Akwapim-Togo mountain ranges allowed him to provide for the community during challenging times. His hunting expeditions often took him across the wooded slopes where he became a legendary provider.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="reveal" style="transition-delay: 200ms;">
+                        <div class="card-archive h-full">
+                            <h3 class="text-2xl text-stone-100 mb-8 font-serif">Historical Context</h3>
+                            <div class="space-y-8" style="display: flex; flex-direction: column; gap: 2rem;">
+                                <div class="flex gap-6">
+                                    <div class="flex items-center justify-center text-amber-500" style="width: 3rem; height: 3rem; background-color: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 0.25rem;">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-stone-200 font-bold text-sm tracking-widest uppercase mb-1">Traditional Tracking</h4>
+                                        <p class="text-xs text-stone-500 font-sans leading-relaxed">Mastery of the forested hills and Togo mountain ranges as a cultural profession.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-6">
+                                    <div class="flex items-center justify-center text-amber-500" style="width: 3rem; height: 3rem; background-color: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 0.25rem;">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-stone-200 font-bold text-sm tracking-widest uppercase mb-1">Community Pillar</h4>
+                                        <p class="text-xs text-stone-500 font-sans leading-relaxed">Resource distribution and group leadership established respect long before the church.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="aspect-video rounded-lg overflow-hidden border border-white/10 mt-8">
+                                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover" style="filter: grayscale(1) brightness(0.6);" alt="Archival Forest">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Family Section -->
+        <section id="family" class="py-32 px-8 bg-forest-dark border-t border-white/5 relative">
+            <div class="max-w-7xl">
+                <div class="text-center mb-20 reveal">
+                    <span class="text-xs uppercase tracking-widest text-amber-600 font-bold mb-2 block">The Adeklo Lineage // 04</span>
+                    <h2 class="font-serif text-5xl text-white font-light italic mb-4">Descendants & Legacy Preservation</h2>
+                    <div style="width: 6rem; height: 1px; background-color: var(--color-gold-accent); margin: 0 auto; opacity: 0.5;"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Samuel -->
+                    <div class="card-archive reveal" style="display: flex; flex-direction: column; gap: 2rem;">
+                         <div style="display: flex; flex-direction: row; gap: 2.5rem; align-items: center;">
+                            <div class="overflow-hidden border border-white/10" style="width: 10rem; height: 14rem; border-radius: 0.5rem; flex-shrink: 0;">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400" class="img-cover grayscale" alt="Samuel">
+                            </div>
+                            <div>
+                                <h3 class="text-2xl text-stone-100 font-serif mb-2">Samuel Yao Adeklo</h3>
+                                <p class="text-xs uppercase tracking-widest text-amber-600 font-bold mb-4">Son of John Tutu Adeklo</p>
+                                <p class="text-xs text-stone-400 leading-relaxed mb-8">
+                                    His records and writings serve as the primary link to our oral history, preserving elements of the family heritage for modern times.
+                                </p>
+                                <a href="https://samueladeklo.created.app/" target="_blank" class="btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 10px;">Visit Website &rarr;</a>
+                            </div>
+                         </div>
+                    </div>
+
+                    <!-- Solomon -->
+                    <div class="card-archive reveal" style="transition-delay: 200ms; display: flex; flex-direction: column; gap: 2rem;">
+                        <div style="display: flex; flex-direction: row; gap: 2.5rem; align-items: center;">
+                            <div class="overflow-hidden border border-white/10" style="width: 10rem; height: 14rem; border-radius: 0.5rem; flex-shrink: 0;">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400" class="img-cover grayscale" alt="Solomon">
+                            </div>
+                            <div>
+                                <h3 class="text-2xl text-stone-100 font-serif mb-2">Solomon Yaw Adeklo</h3>
+                                <p class="text-xs uppercase tracking-widest text-amber-600 font-bold mb-4">Grandson // Digital Pioneer</p>
+                                <p class="text-xs text-stone-400 leading-relaxed mb-8">
+                                    Technology specialist and creative innovator bridging historical storytelling with modern digital experiences. Designer of this archive.
+                                </p>
+                                <a href="https://www.solomonadeklo.com/" target="_blank" class="btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 10px;">Explore Workspace &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final Legacy Summary -->
+                <div class="mt-24 p-12 bg-stone-900/60 border border-amber-500/10 rounded-xl text-center reveal">
+                    <h3 class="font-serif text-3xl text-amber-500 italic mb-8">Legacy Summary</h3>
+                    <p class="text-stone-300 text-lg italic max-w-3xl mx-auto leading-relaxed">
+                        John Tutu Adeklo (Dordor) is honored in family and community memory as: <br/>
+                        <span class="text-white font-bold not-italic">Hunter, Husband of Ruth Ehah of Todome, Father of Seven, First Presbyter of Hlefi, and Patriarch of the Adeklo lineage.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hlefi Heritage -->
+        <section id="hlefi" class="py-32 px-8 bg-forest-medium relative overflow-hidden">
+             <div class="max-w-7xl relative z-10">
+                <div class="flex flex-col lg:flex-row gap-24 items-center">
+                    <div class="lg:w-1/3 reveal">
+                        <span class="text-xs uppercase tracking-widest text-amber-600 font-bold mb-2 block">Our Homeland // 05</span>
+                        <h2 class="font-serif text-6xl text-white font-light italic mb-8">Hlefi, Volta</h2>
+                        <p class="text-stone-400 leading-relaxed mb-10">
+                            Nestled in the breathtaking Togo mountains, Hlefi represents the perfect intersection of nature's beauty and historical spiritual significance in the Volta Region of Ghana.
+                        </p>
+                        <a href="https://www.solomonadeklo.com/Hlefi/" target="_blank" class="btn-primary" style="font-size: 10px;">Visit Hlefi Official Site</a>
+                    </div>
+                    <div class="lg:w-2/3 grid grid-cols-2 gap-4 reveal" style="transition-delay: 300ms;">
+                        <div class="aspect-video bg-stone-900 rounded-lg overflow-hidden border border-white/10 col-span-2">
+                             <img src="https://images.unsplash.com/photo-1510797215324-95aa89f43c33?auto=format&fit=crop&q=80&w=1200" class="img-cover" alt="Hlefi Landscape">
+                        </div>
+                        <div class="aspect-square bg-stone-900 rounded-lg overflow-hidden border border-white/10">
+                             <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=600" class="img-cover" alt="Mountains">
+                        </div>
+                        <div class="aspect-square bg-stone-900 rounded-lg overflow-hidden border border-white/10">
+                             <img src="https://images.unsplash.com/photo-1533613220915-609f661a6fe1?auto=format&fit=crop&q=80&w=600" class="img-cover" alt="Village">
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="py-32 px-8 bg-forest-dark">
+            <div class="max-w-7xl">
+                 <div class="text-center mb-24 reveal">
+                    <h2 class="font-serif text-5xl text-amber-500 font-light italic">Cinematic Collection</h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="aspect-square bg-stone-900 border border-white/10 reveal" style="transition-delay: 50ms;"><img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=400" class="img-cover"></div>
+                    <div class="aspect-square bg-stone-900 border border-white/10 reveal" style="transition-delay: 100ms;"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400" class="img-cover grayscale"></div>
+                    <div class="aspect-square bg-stone-900 border border-white/10 reveal" style="transition-delay: 150ms;"><img src="https://images.unsplash.com/photo-1548247416-ec66f4900b2e?auto=format&fit=crop&q=80&w=400" class="img-cover sepia-[0.3]"></div>
+                    <div class="aspect-square bg-stone-900 border border-white/10 reveal" style="transition-delay: 200ms;"><img src="https://images.unsplash.com/photo-1510797215324-95aa89f43c33?auto=format&fit=crop&q=80&w=400" class="img-cover"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-forest-dark border-t border-stone-800 pt-32 pb-12 px-8">
+        <div class="max-w-7xl">
+            <div class="flex flex-col lg:flex-row justify-between gap-16 mb-24">
+                <div style="max-width: 28rem;">
+                    <h3 class="font-serif text-4xl text-amber-500 italic mb-6">John Tutu Adeklo</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed mb-10">
+                        Preserving the legacy of a respected hunter, pioneering Christian leader, and beloved patriarch. A testament to Ghanaian heritage in Hlefi.
+                    </p>
+                    <div class="p-6 border border-amber-500/20 bg-amber-500/5 rounded-lg">
+                        <p class="text-xs uppercase tracking-widest text-amber-500 font-bold mb-2">Heritage Design Credit</p>
+                        <p class="text-stone-300 text-xs italic">
+                            This historical archive was designed and curated by his grandson <br/>
+                            <a href="https://www.solomonadeklo.com/" target="_blank" class="text-white hover:text-amber-500 underline transition-all">Solomon Yaw Adeklo</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-16">
+                    <div>
+                        <h4 class="uppercase tracking-widest text-stone-500 font-bold mb-8" style="font-size: 9px;">Navigation</h4>
+                        <ul class="text-stone-400 uppercase tracking-widest" style="list-style: none; font-size: 10px; display: flex; flex-direction: column; gap: 1rem;">
+                            <li><a href="#home" class="nav-link">Top Archive</a></li>
+                            <li><a href="#biography" class="nav-link">Biography</a></li>
+                            <li><a href="#hlefi" class="nav-link">Hlefi Official</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="uppercase tracking-widest text-stone-500 font-bold mb-8" style="font-size: 9px;">Resources</h4>
+                        <ul class="text-stone-400 uppercase tracking-widest" style="list-style: none; font-size: 10px; display: flex; flex-direction: column; gap: 1rem;">
+                            <li><a href="https://samueladeklo.created.app/" class="nav-link">Samuel Adeklo</a></li>
+                            <li><a href="https://www.solomonadeklo.com/Hlefi/" class="nav-link">Tourism Hlefi</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-8 text-stone-500 font-mono" style="font-size: 9px; text-transform: uppercase; letter-spacing: 0.3em;">
+                <p>&copy; 2024 Adeklo Family Legacy. Strictly Archival Purpose.</p>
+                <div class="flex gap-6">
+                    <span style="color: #451a03;">Ghana</span>
+                    <span style="color: #451a03;">Volta Region</span>
+                    <span style="color: #451a03;">Hlefi</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Audio Control -->
+    <button id="audio-toggle" class="fixed z-50 p-4 bg-stone-900 border border-amber-500/30 rounded-full text-amber-500 shadow-2xl hover:bg-amber-500 hover:text-forest-dark transition-all" style="bottom: 2rem; right: 2rem; cursor: pointer;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+    </button>
+
+    <script src="/src/main.js"></script>
+</body>
+</html>
