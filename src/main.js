@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-  
+  // Loader sequence
+  const loader = document.getElementById('loader');
+  setTimeout(() => {
+    loader.classList.add('fade-out');
+    setTimeout(() => loader.style.display = 'none', 1000);
+  }, 2500);
+
   // Audio Player
   const audio = document.getElementById('bg-audio');
   const audioBtn = document.getElementById('audio-toggle');
